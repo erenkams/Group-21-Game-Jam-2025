@@ -97,34 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Postapo Tileset_1
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87167c4d5222be34e80edca07e14faf0
-      internalID: -2090543284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Postapo Tileset_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 448
-        width: 257
-        height: 191
+        y: 453
+        width: 256
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,13 +118,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Postapo Tileset_2
+      name: Postapo Tileset_24
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 256
-        height: 62
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,17 +132,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1989028566fbfab47abff8bc06c5185d
-      internalID: 204349208
+      spriteID: 94776155062b6ee419a077da40f73bbb
+      internalID: -981216947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Postapo Tileset_3
+      name: Postapo Tileset_32
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 320
         width: 128
         height: 64
@@ -174,29 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff6c4f6d4401f914aac5ab0a783ec5e4
-      internalID: 1713772906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Postapo Tileset_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 318
-        width: 256
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab609f4c45a82c1499a612110b020a86
-      internalID: -1251070917
+      spriteID: b5f9b39ed4be197429f151642c07ad89
+      internalID: 859645952
       vertices: []
       indices: 
       edges: []
@@ -213,10 +171,50 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Postapo Tileset_0: 1600174306
-      Postapo Tileset_1: -2090543284
-      Postapo Tileset_2: 204349208
-      Postapo Tileset_3: 1713772906
-      Postapo Tileset_4: -1251070917
+      Postapo Tileset_1: -1850153121
+      Postapo Tileset_10: -666040000
+      Postapo Tileset_11: -1744141741
+      Postapo Tileset_12: -854842906
+      Postapo Tileset_13: -1236032756
+      Postapo Tileset_14: 671091903
+      Postapo Tileset_15: 1046646147
+      Postapo Tileset_16: -1879628688
+      Postapo Tileset_17: 1188607305
+      Postapo Tileset_18: -593617493
+      Postapo Tileset_19: -2036029996
+      Postapo Tileset_2: -1704100637
+      Postapo Tileset_20: -854669130
+      Postapo Tileset_21: 365812639
+      Postapo Tileset_22: 1566792863
+      Postapo Tileset_23: -1439797765
+      Postapo Tileset_24: -981216947
+      Postapo Tileset_25: -1595716998
+      Postapo Tileset_26: -1954733548
+      Postapo Tileset_27: 1770787255
+      Postapo Tileset_28: -1548970429
+      Postapo Tileset_29: -78674153
+      Postapo Tileset_3: 446224616
+      Postapo Tileset_30: -1840448921
+      Postapo Tileset_31: -1401922534
+      Postapo Tileset_32: 859645952
+      Postapo Tileset_33: -658970889
+      Postapo Tileset_34: 65935647
+      Postapo Tileset_35: 1460488303
+      Postapo Tileset_36: 166012858
+      Postapo Tileset_37: -693178430
+      Postapo Tileset_38: 1062528883
+      Postapo Tileset_39: -1538838689
+      Postapo Tileset_4: 1328135082
+      Postapo Tileset_40: 1448817630
+      Postapo Tileset_41: 373734277
+      Postapo Tileset_42: 1459846189
+      Postapo Tileset_43: -464674782
+      Postapo Tileset_44: -784069318
+      Postapo Tileset_5: -1577509461
+      Postapo Tileset_6: 244024054
+      Postapo Tileset_7: -1204402790
+      Postapo Tileset_8: -1638082244
+      Postapo Tileset_9: -1719579873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
