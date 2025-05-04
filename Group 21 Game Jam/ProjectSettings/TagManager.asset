@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Zemin
+  - Energy
   layers:
   - Default
   - TransparentFX
@@ -49,4 +52,7 @@ TagManager:
     locked: 0
   - name: foreground
     uniqueID: 2718840349
+    locked: 0
+  - name: characters
+    uniqueID: 3532771855
     locked: 0
