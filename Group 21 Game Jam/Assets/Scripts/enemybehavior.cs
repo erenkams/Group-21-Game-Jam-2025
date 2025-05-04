@@ -11,7 +11,7 @@ public class enemybehavior : MonoBehaviour
     private Vector3 targetPosition;
     private SpriteRenderer spriteRenderer;
     private Animator anim;
-    private bool grounded = true;
+    
 
     void Start()
     {

@@ -9,11 +9,15 @@ public class CharacterController : MonoBehaviour
     private float moveDirection;
 
     private bool jump;
-    private bool grounded = true;
+    private bool grounded;
 
     private Rigidbody2D rigidBody2D;
     private SpriteRenderer spriteRenderer;
     private Animator anim;
+
+    [SerializeField] private Transform groundCheck;     // Ayak noktasý
+    [SerializeField] private float groundCheckDistance = 0.1f;
+    [SerializeField] private LayerMask groundLayer;
 
     void Awake()
     {
@@ -26,9 +30,44 @@ public class CharacterController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        // Hareket
+        // Raycast ile yere temas kontrolü
+        grounded = Physics2D.Raycast(groundCheck.position, Vector2.down, groundCheckDistance, groundLayer);
+        anim.SetBool("grounded", grounded);
+
+        // Hareket sadece yerdeyken
+        if (grounded)
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                moveDirection = -1f;
+                spriteRenderer.flipX = true;
+                anim.SetFloat("speed", speed);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                moveDirection = 1f;
+                spriteRenderer.flipX = false;
+                anim.SetFloat("speed", speed);
+            }
+            else
+            {
+                moveDirection = 0f;
+                anim.SetFloat("speed", 0f);
+            }
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                jump = true;
+                anim.SetTrigger("jump");
+            }
+        }
+    }
+
+    void FixedUpdate()
+    {
+        // Yatay hareket
         rigidBody2D.velocity = new Vector2(speed * moveDirection, rigidBody2D.velocity.y);
 
         // Zýplama
@@ -39,47 +78,13 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    private void Update()
+    void OnDrawGizmosSelected()
     {
-        // Yalnýzca yerdeyken yön deðiþtirme
-        if (grounded)
+        // Raycast'ý sahnede göstermek için
+        if (groundCheck != null)
         {
-            if (Input.GetKey(KeyCode.A))
-            {
-                moveDirection = -1.0f;
-                spriteRenderer.flipX = true;
-                anim.SetFloat("speed", speed);
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                moveDirection = 1.0f;
-                spriteRenderer.flipX = false;
-                anim.SetFloat("speed", speed);
-            }
-            else
-            {
-                moveDirection = 0.0f;
-                anim.SetFloat("speed", 0.0f);
-            }
-        }
-
-        // Zýplama kontrolü
-        if (grounded && Input.GetKeyDown(KeyCode.W))
-        {
-            jump = true;
-            grounded = false;
-
-            anim.SetTrigger("jump");
-            anim.SetBool("grounded", false);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Zemin"))
-        {
-            grounded = true;
-            anim.SetBool("grounded", true);
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(groundCheck.position, groundCheck.position + Vector3.down * groundCheckDistance);
         }
     }
 }
