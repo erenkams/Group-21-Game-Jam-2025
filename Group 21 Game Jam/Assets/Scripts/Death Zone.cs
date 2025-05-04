@@ -20,7 +20,7 @@ public class DeathZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
+            Score.lives--;
             SceneManager.LoadScene(_scene.name);
         }
 

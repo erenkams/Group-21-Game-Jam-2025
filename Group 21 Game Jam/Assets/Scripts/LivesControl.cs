@@ -20,7 +20,7 @@ public class LivesControl : MonoBehaviour
                 gameObject.transform.GetChild(1).gameObject.SetActive(false);
                 break;
             case 0:
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(1);
                 break;
             default:
                 break;
